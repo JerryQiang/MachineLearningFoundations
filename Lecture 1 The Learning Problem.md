@@ -2,12 +2,13 @@
 
 # Lecture 1 The Learning Problem
 <br/>
-本篇博客是学习《Machine Learning Foundations》(机器学习基石)—— Hsuan-Tien Lin (林轩田)所做的学习笔记，其中图片和内容皆为林轩田老师团队的智慧结晶，版权所有皆归林轩田老师团队所有，在此感谢林轩田老师团队的付出。
-希望能与大家分享，一起学习，共同进步。
+&emsp;&emsp;本篇博客是学习《Machine Learning Foundations》(机器学习基石)—— Hsuan-Tien Lin (林轩田)所做的学习笔记，其中图片和内容皆为林轩田老师团队的智慧结晶，版权所有皆归林轩田老师团队所有。
+&emsp;&emsp;在此感谢林轩田老师团队的付出。
+&emsp;&emsp;希望能与大家分享，一起学习，共同进步。
 
 ## Course Introduction
 
-本课程是由台湾大学林轩田教授于2018秋季开设的《Machine Learning Foundations》(机器学习基石)，内含数学推导，丰富举例，老师诙谐有趣，生动活跃，是学习机器学习基础的优秀课程。
+&emsp;&emsp;本课程是由台湾大学林轩田教授于2018秋季开设的《Machine Learning Foundations》(机器学习基石)，内含数学推导，丰富举例，老师诙谐有趣，生动活跃，是学习机器学习基础的优秀课程。
 
 本课程主要从以下四个方面讲述Machine Learning:
 
@@ -48,7 +49,7 @@ skill means **improving some performance measure**
 4.&nbsp;guessing whether the earth will be destroyed by the misuse of nuclear power in the next ten years
 <br/>
 
-**Explanation**<br/> 
+**Explanation**
 使用机器学习的三个要素：（1）要有规律；（2）不能直接编程实现规则；（3）要有数据。
 1.预测一个小孩子奇数分钟哭还是偶数分钟哭，没有规律。
 2.判断一个图形中是否有圆，可以直接编程实现。
@@ -62,26 +63,21 @@ skill means **improving some performance measure**
 
 **机器学习**是一种**构建复杂系统**的**可替代方案**。
 
-- ** 衣 **<br/>
+- 衣
   &emsp;Abu-Mostafa, 2012
   根据销售数据和用户调查，推荐衣物穿搭风格。
-
-- ** 食 **<br/>
+-   食
   &emsp;Sadilek et al., 2013
   根据推特用户的评语及定位，探究一家餐馆食物中毒的可能性:-)
-
-- ** 住 **<br/>
+-   住
   &emsp;Tsanas and Xifara, 2012
   根据建筑物的特征和它们的能源消耗，预测它们附近建筑物的能源消耗。
-
-- ** 行 **<br/>
+-   行
   &emsp;Stallkamp et al., 2012
   根据交通标识图片及其含义，准确识别交通标志的含义。
-
-- ** 育 **<br/>
+-   育
   &emsp;根据学生在数学辅导系统中的测试及记录，判断学生是否能做对一道题。
-
-- ** 娱乐 **<br/>
+-   娱乐
   &emsp;competition held by Netflix in 2006
   根据用户对电影的评分，预测用户对未观赏电影的评分。
 
@@ -98,14 +94,15 @@ skill means **improving some performance measure**
 
 4.&nbsp;**None of the above** &nbsp;$\checkmark$
 
-**Explanation**<br/> 
+**Explanation**
 机器学习应用广泛(衣食住行育等)，无所不在。
 <br/>
 
 ## Components of Machine Learning
 
 <center>Metaphor Using Credit Approval</center>
-|   |   |
+
+| property  | value  |
 | :--: | :--: |
 | age | 23 years |
 | annual salary | NTD 1,000,000 |
@@ -154,7 +151,7 @@ $$
 4.&nbsp;$S_1 = X,S_2 = D,S_3 = Y,S_4 = H​$
 
 <br/>
-**Explanation**<br/> 
+**Explanation**
 $S_1 = Y$为用户对歌曲的评分集；
 $S_2= X$为用户和歌曲的集合；
 $S_3 = H$为用户喜好歌曲因素的集合；
@@ -189,7 +186,7 @@ $S_4 = D$为样本数据；
 4.&nbsp; statistics can be used for data mining
 <br/>
 
-Explanation**<br/>
+**Explanation**
 机器学习和数据挖掘很类似，但两者有所侧重，不是同一个概念。
 <br/>
 
