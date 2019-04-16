@@ -38,6 +38,13 @@ skill means **improving some performance measure**
 计算机根据**数据**，通过**机器学习演算法**，探究数据之中**潜藏的规律**
 <br/>
 
+### Key Essence of Machine Learning
+
+(1)**pattern**(performance measure can be improved)
+(2)**definition**(no programmable definition, so choose ML)
+(3)**data**(computed from data about the pattern )
+<br/>
+
 ### Fun Time
 **Which of the following is best suited for machine learning?**<br/>
 1.&nbsp;predicting whether the next cry of the baby girl happens at an even-numbered minute or not
@@ -192,8 +199,18 @@ $S_4 = D$为样本数据；
 
 
 
-
 ## Summary
+
+<br/>
+
+
+
+### 讲课总结
+$$
+\\ H\stackrel{D,A}{\longrightarrow}f \approx g
+$$
+<br/>
+
 ### 机器学习基石课程总结
 **学完这门课，大家最终会掌握机器学习的完整概念和流程。**
 
