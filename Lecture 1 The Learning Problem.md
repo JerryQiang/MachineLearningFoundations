@@ -205,7 +205,7 @@ $S_4 = D$为样本数据；
 
 
 
-### 讲课总结
+### 讲义总结
 $$
 \\ H\stackrel{D,A}{\longrightarrow}f \approx g
 $$
