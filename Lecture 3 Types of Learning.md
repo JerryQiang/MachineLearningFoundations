@@ -1,6 +1,8 @@
 [TOC]
 
 # Lecture 3: Types of Learning
+<br/>
+
 ## Learning with Different Output Space $Y$
 基于输出空间是否为**数值**，数值是否**连续**分类。
 &emsp;&emsp;数值离散为分类学习(classification)
@@ -37,7 +39,7 @@
 **To build a tree recognition system, a company decides to gather one million of pictures on the Internet. Then, it asks each of the 10 company members to view 100 pictures and record whether each picture contains a tree. The pictures and records are then fed to a learning algorithm to build the system. What type of learning problem does the algorithm need to solve?**
 1 supervised
 2 unsupervised
-3 **semi-supervised** &nbsp;$\checkmark$
+3 **semi-supervised** &nbsp;$\checkmark​$
 4 reinforcement
 <br/>
 **Explanation**
@@ -105,6 +107,8 @@ abstract features: the pattern of image advertisement system
 ## Summary
 ### 讲义总结
 本次讲义主要讲述了不同类型的学习。基于不同角度有不同的分类，其中**[]**为本门课学习和接触的，后面的更难，也更接近现实需求。
+**focus**: **binary classification** or **regression** from a **batch** of **supervised data** with **concrete features.**
+<br/>
 **Learning with Different Output Space** $Y$
 &emsp;&emsp;[classification], [regression], structured
 <br/>
