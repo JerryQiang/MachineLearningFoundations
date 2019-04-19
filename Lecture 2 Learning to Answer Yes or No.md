@@ -3,7 +3,7 @@
 # Lecture 2: Learning to Answer Yes/No
 ## Perceptron Hypothesis Set
 
-For $x = (x_1 ,x_2 ,··· ,x_d )$ ‘features of sample’, compute a weighted ‘score’($\sum_{i=1}^{d}w_ix_i>threshold$)
+For $x = (x_1 ,x_2 ,··· ,x_d )​$ ‘features of sample’, compute a weighted ‘score’($\sum_{i=1}^{d}w_ix_i>threshold​$)
 and approve credit if score>threshold, deny credit if score>threshold and ignore the equals.
 $Y:\{+1,  -1\}​$:
 $$
@@ -93,7 +93,13 @@ $$
 ### Linear Separability
 if **PLA halts** (i.e. no more mistakes), (necessary condition) D allows **some w** to **make no mistake** call such **D linear separable.**
 
-linear separable $D$ ⇔ exists **perfect** $\mathbf{w_f}$ such that $sign(w_f^Tx_{n}) = y_{n}​$
+linear separable $D$ ⇔ exists **perfect** $\mathbf{w_f}$ such that $sign(w_f^Tx_{n}) = y_{n}$
+
+![线性可分性](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\Lecture 2 Learning to Answer Yes or No\linear_separability.png)
+
+<br/>
+
+
 
 ### 感知器的修正
 
@@ -180,9 +186,12 @@ $$
 **结果**
 最终会达到完全可分，不知道会更新多少次。
 
+![在真实数据中学习](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\Lecture 2 Learning to Answer Yes or No\learning_with_data.png)
 
+<br/>
 
 ### Pocket PLA
+
 假设数据存在噪音(noise)，线性不可分，此时我们想得到一个大致完全分类的感知器。
 **Pocket PLA**：modify PLA algorithm (black lines) by keeping best weights in pocket
 （1）初始化$w$->$w_0$
@@ -240,7 +249,10 @@ Pocket PLA算法：
 &emsp;&emsp;若数据集线性不可分，则使用Pocket PLA算法，找一个较好的感知器。
 &emsp;&emsp;Pocket PLA算法按照PLA一样更新$w_{t}$的值，但是用一个Pocket($\hat{\mathbf{w}}$)存储当前犯错误最少的感知器。
 &emsp;&emsp;$g \leftarrow \hat{\mathbf{w}}$
+
+**PLA $A$ takes linear separable $D$ and perceptrons H to get hypothesis g**
+
 <br/>
 
 ### 参考文献
-《Machine Learning Foundations》(机器学习基石)—— Hsuan-Tien Lin (林轩田)
+<a href="https://www.csie.ntu.edu.tw/~htlin/course/mlfound18fall/">《Machine Learning Foundations》(机器学习基石)—— Hsuan-Tien Lin (林轩田)</a>

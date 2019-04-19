@@ -230,5 +230,5 @@ $$
 <br/>
 
 ### 参考文献
-《Machine Learning Foundations》(机器学习基石)—— Hsuan-Tien Lin (林轩田)
-《Machine Learning Techniques》(机器学习技法)—— Hsuan-Tien Lin (林轩田)
+<a href="https://www.csie.ntu.edu.tw/~htlin/course/mlfound18fall/">《Machine Learning Foundations》(机器学习基石)—— Hsuan-Tien Lin (林轩田)</a>
+<a href="https://www.csie.ntu.edu.tw/~htlin/course/mltech18spring/">《Machine Learning Techniques》(机器学习技法)—— Hsuan-Tien Lin (林轩田)</a>
