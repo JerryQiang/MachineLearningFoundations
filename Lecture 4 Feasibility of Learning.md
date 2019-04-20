@@ -3,7 +3,7 @@
 <br/>
 
 ## Learning is Impossible?
-&emsp;&emsp;absolutely no free lunch outside $D​$
+&emsp;&emsp;absolutely no free lunch outside $D$
 <br/>
 
 ### No Free Lunch
@@ -49,7 +49,7 @@ $$
 &emsp;&emsp; for marbles, coin, polling, ...
 &emsp;&emsp; 概率上界的大小取决于宽松间隙($\epsilon$)和样本数量($N$)，两者越大，概率上界就越小。
 &emsp;&emsp;$\nu \approx \mu$，概率最大，接近1.
-&emsp;&emsp;$N$越大，越有可能用$\nu$推测$\mu​$
+&emsp;&emsp;$N$越大，越有可能用$\nu$推测$\mu$
 <br/>
 
 ### Fun Time
@@ -60,7 +60,7 @@ $$
 to bound the probability that a sample of 10 marbles will have $\nu ≤ 0.1$. What bound do you get?
 1 0.67
 2 0.40
-3 **0.33** &nbsp;$\checkmark​$
+3 **0.33** &nbsp;$\checkmark$
 4 0.05
 <br/>
 **Explanation**
@@ -92,7 +92,7 @@ $$
 {E_{\text { out }}(\mathrm{h})=\underset{\mathbf{x} \sim P}{\mathcal{E}}[h(\mathbf{x}) \neq f(\mathbf{x})]}
 $$
 
-如果$N$足够大，我们可以用$E_{in}(h)$(in-sample error)来估计$E_{out}(h)​$(out-sample error)。
+如果$N$足够大，我们可以用$E_{in}(h)$(in-sample error)来估计$E_{out}(h)$(out-sample error)。
 
 $$
 \mathbb{P}\left[ | E_{\text { in }}(h)-E_{\text { out }}(h) |>\epsilon\right] \leq 2 \exp \left(-2 \epsilon^{2} N\right)
@@ -115,13 +115,13 @@ Your friend tells you her secret rule in investing in a particular stock: ‘Whe
 **To verify the rule, you chose 100 days uniformly at random from the past 10 years of stock data, and found that 80 of them satisfy the rule.**
 What is the best guarantee that you can get from the verification?
 1 You’ll definitely be rich by exploiting the rule in the next 100 days.
-2 **You’ll likely be rich by exploiting the rule in the next 100 days, if the market behaves similarly to the last 10 years.** &nbsp;$\checkmark​$
+2 **You’ll likely be rich by exploiting the rule in the next 100 days, if the market behaves similarly to the last 10 years.** &nbsp;$\checkmark$
 3 You’ll likely be rich by exploiting the ‘best rule’ from 20 more friends in the next 100 days.
 4 You’d definitely have been rich if you had exploited the rule in the past 10 years. 
 <br/>
 **Explanation**
 股票市场风云变幻，你用历史数据搭建了一个优秀的模型当且仅当未来的趋势跟历史发展一致时，你才能利用这个模型获益。
-从霍夫丁不等式的角度来看：历史数据搭建了一个优秀的模型($E_{\mathrm{in}}(h) \ small​$), 且未来的趋势跟历史发展一致时$E_{\mathrm{in}}(h) \approx E_{\mathrm{out}}(h)​$，那么模型对于未来趋势预测的效果优秀($E_{\mathrm{out}}(h) \ small​$)，你最终就能获益。
+从霍夫丁不等式的角度来看：历史数据搭建了一个优秀的模型($E_{\mathrm{in}}(h) \ small$), 且未来的趋势跟历史发展一致时$E_{\mathrm{in}}(h) \approx E_{\mathrm{out}}(h)$，那么模型对于未来趋势预测的效果优秀($E_{\mathrm{out}}(h) \ small$)，你最终就能获益。
 <br/>
 
 
@@ -147,7 +147,7 @@ $$1-\left(\frac{31}{32}\right)^{150} = 99.145 \%$$
 
 由于假设集增多，极端数据出现的可能性增大，由于我们的选择，导致$E_{in}$ and $E_{out}$差别过大，我们将这样的选择称为$Bad \ Sample$.
 
-$E_{out}$ big (far from $f$), but $E_{in}​$ small (correct on most **examples**) called **BAD Data**.
+$E_{out}$ big (far from $f$), but $E_{in}$ small (correct on most **examples**) called **BAD Data**.
 
 $$
 \mathbb{P}_{\mathcal{D}}[\mathrm{BAD} \ \mathcal{D}]=\sum_{\text { all possible } \mathcal{D}} \mathbb{P}(\mathcal{D}) \cdot[\mathrm{BAD} \ \mathcal{D}]
@@ -168,7 +168,7 @@ $$
 
 ### The ‘Statistical’ Learning Flow
 若假设集($|H|$)大小为有限的$M$，$N$足够大，通过机器学习演算法($A$)学习到的对于任意一个$g$，都有$E_{\mathrm{in}}(g) \approx E_{\mathrm{out}}(g)$.
-若此时$A$学到一个$E_{\mathrm{in}}(g) \approx 0$，就能保证$E_{\mathrm{out}}(g) \approx 0​$ => **learning impossible** 真正学到了知识:-).
+若此时$A$学到一个$E_{\mathrm{in}}(g) \approx 0$，就能保证$E_{\mathrm{out}}(g) \approx 0$ => **learning impossible** 真正学到了知识:-).
 
 ![The Statistical Learning Flow](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\Lecture 4 Feasibility of Learning\statistic_learning_flow.png)
 <br/>
@@ -182,16 +182,16 @@ $$
 \quad h_{2}(\mathbf{x})=\operatorname{sign}\left(x_{2}\right)} 
 \\ {h_{3}(\mathbf{x})=\operatorname{sign}\left(-x_{1}\right), \quad h_{4}(\mathbf{x})=\operatorname{sign}\left(-x_{2}\right)}\end{array}
 $$
-For any $N​$ and $\epsilon​$, which of the following statement is **not true**?
-1 **the BAD data of $h_1​$ and the BAD data of $h_2​$ are exactly the same**. &nbsp;$\checkmark​$
-2 the BAD data of $h_1​$ and the BAD data of $h_3​$ are exactly the same.
-3 $\mathbb{P_D}[\mathrm{BAD} \  for \  some \ h_k] \leq 8 \exp \left(-2 \epsilon^{2} N\right)​$
-4 $\mathbb{P_D}[\mathrm{BAD} \  for \  some \ h_k] \leq 4 \exp \left(-2 \epsilon^{2} N\right)​$
+For any $N$ and $\epsilon$, which of the following statement is **not true**?
+1 **the BAD data of $h_1$ and the BAD data of $h_2$ are exactly the same**. &nbsp;$\checkmark$
+2 the BAD data of $h_1$ and the BAD data of $h_3$ are exactly the same.
+3 $\mathbb{P_D}[\mathrm{BAD} \  for \  some \ h_k] \leq 8 \exp \left(-2 \epsilon^{2} N\right)$
+4 $\mathbb{P_D}[\mathrm{BAD} \  for \  some \ h_k] \leq 4 \exp \left(-2 \epsilon^{2} N\right)$
 <br/>
 **Explanation**
-参考多个$g​$中，霍夫丁不等式的上界推导公式。
-对于BAD data $x​$，$E_{in}​$和$E_{out}​$相差大，那么假设h对于$-x​$，所得到$-E_{in}​$和$-E_{out}​$相差也会大，所以$x​$和$-x​$都是BAD data.
-所以$\operatorname{sign}\left(x_{}\right)​$和$\operatorname{sign}\left(-x_{}\right)​$有相同的BAD data.
+参考多个$g$中，霍夫丁不等式的上界推导公式。
+对于BAD data $x$，$E_{in}$和$E_{out}$相差大，那么假设h对于$-x$，所得到$-E_{in}$和$-E_{out}$相差也会大，所以$x$和$-x$都是BAD data.
+所以$\operatorname{sign}\left(x_{}\right)$和$\operatorname{sign}\left(-x_{}\right)$有相同的BAD data.
 <br/>
 
 <br/>
@@ -199,13 +199,13 @@ For any $N​$ and $\epsilon​$, which of the following statement is **not true
 
 ## Summary
 ### 讲义总结
-假设集($|H|​$)大小为有限的$M​$，$N​$足够大，通过机器学习演算法($A​$)学习到的对于任意一个$g​$，都有$E_{\mathrm{in}}(g) \approx E_{\mathrm{out}}(g)​$.
-若此时$A​$学到一个$E_{\mathrm{in}}(g) \approx 0​$，就能保证$E_{\mathrm{out}}(g) \approx 0​$ => **learning impossible** 真正学到了知识:-).
+假设集($|H|$)大小为有限的$M$，$N$足够大，通过机器学习演算法($A$)学习到的对于任意一个$g$，都有$E_{\mathrm{in}}(g) \approx E_{\mathrm{out}}(g)$.
+若此时$A$学到一个$E_{\mathrm{in}}(g) \approx 0$，就能保证$E_{\mathrm{out}}(g) \approx 0$ => **learning impossible** 真正学到了知识:-).
 
 **学习是可行的。**
 
 Learning is Impossible?
-&emsp;&emsp;absolutely no free lunch outside $D​$
+&emsp;&emsp;absolutely no free lunch outside $D$
 <br/>
 
 Probability to the Rescue
