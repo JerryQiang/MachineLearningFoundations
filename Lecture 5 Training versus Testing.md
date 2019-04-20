@@ -1,0 +1,113 @@
+[TOC]
+<br/>
+
+# Lecture 5: Training versus Testing
+<br/>
+
+## Recap and Preview
+
+![The Statistical Learning Flow](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\Lecture 5 Training versus Testing\statistic_learning_flow.png)
+<br/>
+
+### Two Central Questions
+
+![Two Central Questions](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\Lecture 5 Training versus Testing\two_central_questions.png)
+<br/>
+
+&emsp;&emsp;**make sure that $E_{out} (g)$ is close enough to $E_{in} (g)$.**
+&emsp;&emsp;**make  $E_{in} (g)​$mall enough.**
+<br/>
+
+### Fun Time
+Data size: how large do we need?
+One way to use the inequality
+$$
+\mathbb{P}\left[ | E_{\text { in }}(g)-E_{\text { out }}(g) |>\epsilon\right] \leq \underbrace{2 \cdot M \cdot \exp \left(-2 \epsilon^{2} N\right)}_{\delta}
+$$
+is to pick a tolerable difference ? as well as a tolerable BAD probability δ, and then gather data with size (N) large enough to achieve those tolerance criteria. Let ? = 0.1, δ = 0.05, and M = 100.
+What is the data size needed?
+1.&nbsp; 215 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 2.&nbsp;**415** &nbsp;$\checkmark$&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 3.&nbsp;615 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 4.&nbsp;815
+<br/>
+**Explanation**
+$N=\frac{1}{2 \epsilon^{2}} \ln \frac{2 M}{\delta}$
+所以$N =414.7  \approx 415​$
+<br/>
+
+
+
+
+## Effective Number of Lines
+
+###  Uniform Bound
+
+![Similar Hypotheses](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\Lecture 5 Training versus Testing\similar_hypotheses.png)
+<br/>
+$$
+B_{m} : | E_{\text { in }}\left(h_{m}\right)-E_{\text { out }}\left(h_{m}\right) |>\epsilon
+$$
+
+for most $D$,$E_{\mathrm{in}}(h_i) = E_{\mathrm{in}}(h_j)$
+$E_{\mathrm{out}}(h_i) \approx E_{\mathrm{out}}(h_j)​$
+
+$\begin{aligned} 
+\mathbb{P}_{\mathcal{D}}[\mathrm{BAD} \ \mathcal{D} \ for \ h_1]+\mathbb{P}_{\mathcal{D}}[\mathrm{BAD} \ \mathcal{D} \ for \ h_2]+...+\mathbb{P}_{\mathcal{D}}[\mathrm{BAD} \ \mathcal{D} \ for \ h_M](union \ bound)
+\end{aligned} ​$ **over-estimating**
+
+为了合并重叠的部分，我们按照类别将类似的假设分组归类。
+
+&emsp;&emsp;at most 14 through the eye of 4 inputs
+<br/>
+
+### Many Lines
+$$
+\mathcal{H}=\left\{\text { all lines in } \mathbb{R}^{2}\right\}
+$$
+
+<br/>
+
+## Effective Number of Hypotheses
+
+![1点2个类别](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\Lecture 5 Training versus Testing\one_point_two_kinds.png)
+**1点2个类别**
+<br/>
+
+![2个点4个类别](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\Lecture 5 Training versus Testing\two_points_four_kinds.png)
+**2个点4个类别**
+<br/>
+
+![3个点6个类别](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\Lecture 5 Training versus Testing\three_points_six_kinds.png)
+**3个点6个类别**
+<br/>
+
+![4个点14个类别](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\Lecture 5 Training versus Testing\four_points_fourteen_kinds.png)
+**4个点14个类别**
+<br/>
+
+&emsp;&emsp;at most m H (N) through the eye of N inputs
+<br/>
+
+
+
+## Break Point
+&emsp;&emsp;when m H (N) becomes ‘non-exponential’
+<br/>
+
+
+
+## Summary
+<br/>
+### 讲义总结
+**Recap and Preview**
+&emsp;&emsp;two questions: E out (g) ≈ E in (g), and E in (g) ≈ 0
+<br/>
+
+**Effective Number of Lines**
+&emsp;&emsp;at most 14 through the eye of 4 inputs
+<br/>
+
+**Effective Number of Hypotheses**
+&emsp;&emsp;at most m H (N) through the eye of N inputs
+<br/>
+
+**Break Point**
+&emsp;&emsp;when m H (N) becomes ‘non-exponential’

@@ -1,4 +1,4 @@
-@[toc]
+[TOC]
 # Lecture 4: Feasibility of Learning
 <br/>
 
@@ -182,16 +182,16 @@ $$
 \quad h_{2}(\mathbf{x})=\operatorname{sign}\left(x_{2}\right)} 
 \\ {h_{3}(\mathbf{x})=\operatorname{sign}\left(-x_{1}\right), \quad h_{4}(\mathbf{x})=\operatorname{sign}\left(-x_{2}\right)}\end{array}
 $$
-For any $N$ and $\epsilon$, which of the following statement is **not true**?
-1 **the BAD data of $h_1$ and the BAD data of $h_2$ are exactly the same**. &nbsp;$\checkmark$
-2 the BAD data of $h_1$ and the BAD data of $h_3$ are exactly the same.
-3 $\mathbb{P_D}[\mathrm{BAD} \  for \  some \ h_k] \leq 8 \exp \left(-2 \epsilon^{2} N\right)$
-4 $\mathbb{P_D}[\mathrm{BAD} \  for \  some \ h_k] \leq 4 \exp \left(-2 \epsilon^{2} N\right)$
+For any $N​$ and $\epsilon​$, which of the following statement is **not true**?
+1 **the BAD data of $h_1​$ and the BAD data of $h_2​$ are exactly the same**. &nbsp;$\checkmark​$
+2 the BAD data of $h_1​$ and the BAD data of $h_3​$ are exactly the same.
+3 $\mathbb{P_D}[\mathrm{BAD} \  for \  some \ h_k] \leq 8 \exp \left(-2 \epsilon^{2} N\right)​$
+4 $\mathbb{P_D}[\mathrm{BAD} \  for \  some \ h_k] \leq 4 \exp \left(-2 \epsilon^{2} N\right)​$
 <br/>
 **Explanation**
-参考多个$g$中，霍夫丁不等式的上界推导公式。
-对于BAD data $x$，$E_{in}$和$E_{out}$相差大，那么假设h对于$-x$，所得到$-E_{in}$和$-E_{out}$相差也会大，所以$x$和$-x$都是BAD data.
-所以$\operatorname{sign}\left(x_{}\right)$和$\operatorname{sign}\left(-x_{}\right)$有相同的BAD data.
+参考多个$g​$中，霍夫丁不等式的上界推导公式。
+对于BAD data $x​$，$E_{in}​$和$E_{out}​$相差大，那么假设h对于$-x​$，所得到$-E_{in}​$和$-E_{out}​$相差也会大，所以$x​$和$-x​$都是BAD data.
+所以$\operatorname{sign}\left(x_{}\right)​$和$\operatorname{sign}\left(-x_{}\right)​$有相同的BAD data.
 <br/>
 
 <br/>
@@ -199,8 +199,8 @@ For any $N$ and $\epsilon$, which of the following statement is **not true**?
 
 ## Summary
 ### 讲义总结
-假设集($|H|$)大小为有限的$M$，$N$足够大，通过机器学习演算法($A$)学习到的对于任意一个$g$，都有$E_{\mathrm{in}}(g) \approx E_{\mathrm{out}}(g)$.
-若此时$A$学到一个$E_{\mathrm{in}}(g) \approx 0$，就能保证$E_{\mathrm{out}}(g) \approx 0$ => **learning impossible** 真正学到了知识:-).
+假设集($|H|​$)大小为有限的$M​$，$N​$足够大，通过机器学习演算法($A​$)学习到的对于任意一个$g​$，都有$E_{\mathrm{in}}(g) \approx E_{\mathrm{out}}(g)​$.
+若此时$A​$学到一个$E_{\mathrm{in}}(g) \approx 0​$，就能保证$E_{\mathrm{out}}(g) \approx 0​$ => **learning impossible** 真正学到了知识:-).
 
 **学习是可行的。**
 

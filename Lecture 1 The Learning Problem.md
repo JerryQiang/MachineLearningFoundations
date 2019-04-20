@@ -155,7 +155,7 @@ $$
 
 3.&nbsp;$S_1 = D,S_2 = H,S_3 = Y,S_4 = X​$
 
-4.&nbsp;$S_1 = X,S_2 = D,S_3 = Y,S_4 = H​$
+4.&nbsp;$S_1 = X,S_2 = D,S_3 = Y,S_4 = H$
 
 <br/>
 **Explanation**
