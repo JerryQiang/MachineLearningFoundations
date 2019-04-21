@@ -56,8 +56,50 @@ $B(N, k)$是$m_H (N)$的**上界**
 <br/>
 
 ## Bounding Function: Inductive Cases
-&emsp;&emsp;$B(N,k)$ is poly(N)
 <br/>
+$$
+B(4,3)=11=2 \alpha+\beta
+$$
+
+![Instance Estimating Part](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\Lecture 6 Theory of Generalization\instance_estimating_part.png)
+<br/>
+$$
+\begin{aligned} B(N, k) &=2 \alpha+\beta \\ \alpha+\beta & \leq B(N-1, k) \\ \alpha & \leq B(N-1, k-1) \\ \Rightarrow B(N, k) & \leq B(N-1, k)+B(N-1, k-1) \end{aligned}
+\\ B(N, k) \leq \sum_{i=0}^{k-1} \left( \begin{array}{c}{N} \\ {i}\end{array}\right)
+$$
+![The Upper Bound of Bounding Function](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\Lecture 6 Theory of Generalization\bounding_function_upperbound].png)
+
+$\le$ **实际上是**$=$
+即
+$$
+B(N, k) = B(N-1, k)+B(N-1, k-1)
+\\ B(N, k) = \sum_{i=0}^{k-1} \left( \begin{array}{c}{N} \\ {i}\end{array}\right)
+$$
+
+![The Three Break Points](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\Lecture 6 Theory of Generalization\three_break_points.png)
+<br/>
+
+### Fun Time
+For **1D perceptrons** (positive and negative rays), we know that $m_H (N)$ = 2N. Let k be the minimum break point. Which of the following is not true?
+1 k = 3
+2 for some integers $N>0 ,\ m_{\mathcal{H}}(N)=\sum_{i=0}^{k-1} \left( \begin{array}{c}{N} \\ {i}\end{array}\right)$
+3 for all integers $N>0 ,\ m_{\mathcal{H}}(N)=\sum_{i=0}^{k-1} \left( \begin{array}{c}{N} \\ {i}\end{array}\right)$ &nbsp;$\checkmark$
+4 for all integers $N>2 ,\ m_{\mathcal{H}}(N)<\sum_{i=0}^{k-1} \left( \begin{array}{c}{N} \\ {i}\end{array}\right)$
+<br/>
+**Explanation**
+minimum break point k = 3
+$B(N, k) = \sum_{i=0}^{k-1} \left( \begin{array}{c}{N} \\ {i}\end{array}\right)$
+$B(N, k)$是$m_H (N)$的**上界**，当N$\ge$k时，$m_H (N)<B(N, k)$; 当N$<$k时，$m_H (N)=B(N, k)$.
+<br/>
+拓展：回顾下Lecture 5: Training versus Testing中的Effective Number of Hypotheses Funtime
+求2维感知器中5个点的有效分类数(k=3,N=5 $m_{\mathcal{H}}(N)=? \leq \frac{1}{6} N^{3}+\frac{5}{6} N+1$)，N>k，=取不到。
+正确答案22<($\frac{125}{6}+\frac{25}{6}+1=25$)，验证成功，回顾题目也挺有趣味的。:-)
+
+<br/>
+
+
+
+
 
 ## A Pictorial Proof
 &emsp;&emsp;$m_H (N)$ can replace M with a few changes
