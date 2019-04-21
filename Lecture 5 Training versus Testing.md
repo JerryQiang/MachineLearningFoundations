@@ -173,6 +173,9 @@ $$
 
 ### 讲义总结
 $m_{\mathcal{H}}$是多项式($O\left(N^{k-1}\right)$)，我们用它替换$M$，降低假设集的上界。
+
+通过minimum break point，求出多项式的幂级数。
+
 <br/>
 
 **Recap and Preview**
