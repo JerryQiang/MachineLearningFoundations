@@ -76,10 +76,13 @@ $\le$ **实际上是**$=$
 即
 $$
 B(N, k) = B(N-1, k)+B(N-1, k-1)
-\\ B(N, k) = \sum_{i=0}^{k-1} \left( \begin{array}{c}{N} \\ {i}\end{array}\right) = C_N^0+C_N^1 +...+C_N^{k-1}  
+\\ B(N, k) = \sum_{i=0}^{k-1} \left( \begin{array}{c}{N} \\ {i}\end{array}\right) = C_N^0+C_N^1 +...+C_N^{k-1}
 $$
 
 ![The Three Break Points](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\Lecture 6 Theory of Generalization\three_break_points.png)
+<br/>
+2D perceptrons  break point at 4， $m_{\mathcal{H}}(N) \leq B(N, 4) =  \frac{1}{6} N^{3}+\frac{5}{6} N+1 = O(N^3)$
+
 <br/>
 
 ### Fun Time
@@ -158,6 +161,7 @@ $$
 
 ### 讲义总结
 
+若$m_{\mathcal{H}}(N)$有break point，且$N$足够大，那么$E_{\mathrm{out}} \approx E_{\mathrm{in}}$.
 
 <br/>
 
