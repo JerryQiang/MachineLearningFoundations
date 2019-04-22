@@ -26,7 +26,9 @@ When minimum break point k = 1, what is the maximum possible $m_{\mathcal{H}}(N)
 
 ## Bounding Function: Basic Cases
 <br/>
+
 ### Bounding Function
+
 bounding function $B(N,k)$:
 &emsp;&emsp;maximum possible $m_H (N)$ when break point = k
 $$
@@ -57,6 +59,7 @@ $B(N, k)$是$m_H (N)$的**上界**
 
 ## Bounding Function: Inductive Cases
 <br/>
+
 $$
 B(4,3)=11=2 \alpha+\beta
 $$
@@ -73,7 +76,7 @@ $\le$ **实际上是**$=$
 即
 $$
 B(N, k) = B(N-1, k)+B(N-1, k-1)
-\\ B(N, k) = \sum_{i=0}^{k-1} \left( \begin{array}{c}{N} \\ {i}\end{array}\right)
+\\ B(N, k) = \sum_{i=0}^{k-1} \left( \begin{array}{c}{N} \\ {i}\end{array}\right) = C_N^0+C_N^1 +...+C_N^{k-1}  
 $$
 
 ![The Three Break Points](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\Lecture 6 Theory of Generalization\three_break_points.png)
@@ -102,14 +105,45 @@ $B(N, k)$是$m_H (N)$的**上界**，当N$\ge$k时，$m_H (N)<B(N, k)$; 当N$<$k
 
 
 ## A Pictorial Proof
+
+![Step 1: Replace E_out by E_in'](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\Lecture 6 Theory of Generalization\step1.png)
+<br/>
+
+用$E_{in}'$（有限）替换$E_{out}$(无限)，但是这个不等式及$\frac{1}{2}$的系数的出处，我没想明白。
+
+
+
+![Step 2: Decompose H by Kind](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\Lecture 6 Theory of Generalization\step2.png)
+<br/>
+
+将上界定义为以$m_{H}(2N)$为基准的。
+
+
+
+![Step 3: Use Hoeffding without Replacement](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\Lecture 6 Theory of Generalization\step3.png)
+<br/>
+
+使用无放回的霍夫丁不等式，结果类似，只是$\nu=E_{\text { in }},\mu=\frac{E_{\text { in }}+E_{\text { in }}^{\prime}}{2}$。
+
+
+
+### Vapnik-Chervonenkis (VC) bound
+
+$$
+\begin{aligned}
+& \mathbb{P}\left[\exists h \in \mathcal{H} \text { s.t. } | E_{\text { in }}(h)-E_{\text { out }}(h) |>\epsilon\right] \\ & \leq  4 m_{\mathcal{H}}(2 N) \exp \left(-\frac{1}{8} \epsilon^{2} N\right) \end{aligned}
+$$
 &emsp;&emsp;$m_H (N)$ can replace M with a few changes
 <br/>
 
 
 ## Summary
+本篇讲义主要讲了Bound Function$B(N,k)$以及VC Bound的含义及推导。
+
 <br/>
 
 ### 讲义总结
+
 
 <br/>
 
