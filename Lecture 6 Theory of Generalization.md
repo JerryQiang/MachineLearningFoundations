@@ -136,6 +136,20 @@ $$
 &emsp;&emsp;$m_H (N)$ can replace M with a few changes
 <br/>
 
+### Fun Time
+For positive rays, $m_H (N) = N + 1$. Plug it into the VC bound for ? = 0.1 and N = 10000. What is VC bound of BAD events?
+$$
+\mathbb{P}\left[\exists h \in \mathcal{H} \text { s.t. } | E_{\text { in }}(h)-E_{\text { out }}(h) |>\epsilon\right] \leq 4 m_{\mathcal{H}}(2 N) \exp \left(-\frac{1}{8} \epsilon^{2} N\right)
+$$
+1 $2.77 × 10^{−87}$
+2 $5.54 × 10^{−83}$
+3 $2.98 × 10^{−1}$ &nbsp;$\checkmark$
+4 $2.29 × 10^{−2}$
+<br/>
+**Explanation**
+代入公式计算即可。
+0.2981471603789822
+<br/>
 
 ## Summary
 本篇讲义主要讲了Bound Function$B(N,k)$以及VC Bound的含义及推导。
