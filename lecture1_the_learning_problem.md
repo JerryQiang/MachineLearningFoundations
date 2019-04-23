@@ -120,10 +120,10 @@ skill means **improving some performance measure**
 
 ### Basic Notations
 
-- input: $x ∈ X​$ (i.e. customer application)
+- input: $x ∈ X$ (i.e. customer application)
 - output: $y ∈ Y$ (i.e. good/bad after approving credit card)
 - unknown pattern to be learned ⇔ target function:
-  $f : X → Y​$ (i.e. ideal credit approval formula)
+  $f : X → Y$ (i.e. ideal credit approval formula)
 - data ⇔ training examples: D = {$(x_1,y_1),(x_2,y_2), ··· ,(x_N~ ,y_N~)$ (i.e. historical records in bank)
 - hypothesis set $H$ : set of candidate formula(i.e. {annual salary > NTD 800,000, debt > NTD 100,000,  year in job ≤ 2, ...})
 - hypothesis ⇔ skill with hopefully good performance:
@@ -134,7 +134,7 @@ skill means **improving some performance measure**
 
 **Machine Learning**: use data to compute hypothesis g that approximates target f.
 
-![Practical Definition of Machine Learning](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\Lecture 1 The Learning Problem\Practical Definition of Machine Learning.png)
+![Practical Definition of Machine Learning](resources\imgs\lecture1_the_learning_problem\practical_definition_of_machine_learning.png)
 $$
 f:X_D{\longrightarrow}Y_D
 \\ g:X{\longrightarrow}Y
@@ -145,15 +145,15 @@ $$
 
 ### Fun Time
 **How to use the four sets below to form a learning problem for song recommendation?**
-&nbsp;&nbsp;&nbsp;&nbsp;$S_1​$ = [0,100]
-&nbsp;&nbsp;&nbsp;&nbsp;$S_2​$ = all possible (userid, songid) pairs
-&nbsp;&nbsp;&nbsp;&nbsp;$S_3​$ = all formula that ‘multiplies’ user factors & song factors,indexed by all possible combinations of such factors
-&nbsp;&nbsp;&nbsp;&nbsp;$S_4​$ = 1,000,000 pairs of ((userid, songid), rating)
-1.&nbsp;$S_1 = X,S_2 = Y,S_3 = H,S_4 = D​$
+&nbsp;&nbsp;&nbsp;&nbsp;$S_1$ = [0,100]
+&nbsp;&nbsp;&nbsp;&nbsp;$S_2$ = all possible (userid, songid) pairs
+&nbsp;&nbsp;&nbsp;&nbsp;$S_3$ = all formula that ‘multiplies’ user factors & song factors,indexed by all possible combinations of such factors
+&nbsp;&nbsp;&nbsp;&nbsp;$S_4$ = 1,000,000 pairs of ((userid, songid), rating)
+1.&nbsp;$S_1 = X,S_2 = Y,S_3 = H,S_4 = D$
 
-2.&nbsp;$S_1 = Y,S_2 = X,S_3 = H,S_4 = D​$ &nbsp;$\checkmark​$
+2.&nbsp;$S_1 = Y,S_2 = X,S_3 = H,S_4 = D$ &nbsp;$\checkmark$
 
-3.&nbsp;$S_1 = D,S_2 = H,S_3 = Y,S_4 = X​$
+3.&nbsp;$S_1 = D,S_2 = H,S_3 = Y,S_4 = X$
 
 4.&nbsp;$S_1 = X,S_2 = D,S_3 = Y,S_4 = H$
 
@@ -188,7 +188,7 @@ $S_4 = D$为样本数据；
 
 2.&nbsp; machine learning, data mining and statistics all need data
 
-3.&nbsp; **data mining is just another name for machine learning** &nbsp;$\checkmark​$
+3.&nbsp; **data mining is just another name for machine learning** &nbsp;$\checkmark$
 
 4.&nbsp; statistics can be used for data mining
 <br/>
@@ -214,9 +214,9 @@ $$
 ### 机器学习基石课程总结
 **学完这门课，大家最终会掌握机器学习的完整概念和流程。**
 
-![机器学习基石图标](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\Lecture 1 The Learning Problem\foundation_logo.png)
+![机器学习基石图标](resources\imgs\lecture1_the_learning_problem\foundation_logo.png)
 
-![Learning Flow](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\Lecture 1 The Learning Problem\Learning Flow.png)
+![Learning Flow](resources\imgs\lecture1_the_learning_problem\learning_flow.png)
 <br/>
 
 
@@ -224,9 +224,9 @@ $$
 
 **学完这门课，可以继续学进阶课程——《Machine Learning Techniques》(机器学习技法)，大家最终会学习和掌握各种不同的机器学习算法。**
 
-![机器学习技法图标](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\Lecture 1 The Learning Problem\technique_logo.png)
+![机器学习技法图标](resources\imgs\lecture1_the_learning_problem\technique_logo.png)
 
-![机器学习算法簇](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\Lecture 1 The Learning Problem\jungle.png)
+![机器学习算法簇](resources\imgs\lecture1_the_learning_problem\jungle.png)
 <br/>
 
 ### 参考文献
