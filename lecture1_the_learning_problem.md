@@ -232,3 +232,7 @@ $$
 ### 参考文献
 <a href="https://www.csie.ntu.edu.tw/~htlin/course/mlfound18fall/">《Machine Learning Foundations》(机器学习基石)—— Hsuan-Tien Lin (林轩田)</a>
 <a href="https://www.csie.ntu.edu.tw/~htlin/course/mltech18spring/">《Machine Learning Techniques》(机器学习技法)—— Hsuan-Tien Lin (林轩田)</a>
+
+https://github.com/JerryQiang/MachineLearningFoundations/blob/master/resources/imgs/lecture1_the_learning_problem/foundation_logo.png
+![机器学习算法簇](https://raw.githubusercontent.com/JerryQiang/MachineLearningFoundations/master/resources/imgs/lecture1_the_learning_problem/foundation_logo.png)
+https://raw.githubusercontent.com/JerryQiang/MachineLearningFoundations/master/resources/imgs/lecture1_the_learning_problem/foundation_logo.png

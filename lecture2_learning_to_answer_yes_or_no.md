@@ -3,9 +3,9 @@
 # Lecture 2: Learning to Answer Yes/No
 ## Perceptron Hypothesis Set
 
-For $x = (x_1 ,x_2 ,··· ,x_d )​$ ‘features of sample’, compute a weighted ‘score’($\sum_{i=1}^{d}w_ix_i>threshold​$)
+For $x = (x_1 ,x_2 ,··· ,x_d )$ ‘features of sample’, compute a weighted ‘score’($\sum_{i=1}^{d}w_ix_i>threshold$)
 and approve credit if score>threshold, deny credit if score>threshold and ignore the equals.
-$Y:\{+1,  -1\}​$:
+$Y:\{+1,  -1\}$:
 $$
 h(x)=sign((\sum_{i=1}^{d}w_ix_i)-threshold) \stackrel{w_0 = -threshold, x_0 = +1}{\xlongequal{\quad\quad\quad}}
 \\sign((\sum_{i=1}^{d}w_ix_i)+w_0*x_0) = sign((\sum_{i=0}^{d}w_ix_i)) = sign(w^Tx)
@@ -14,7 +14,7 @@ called ‘**perceptron**’ hypothesis historically
 <br/>
 
 ### Perceptrons in $R^2$
-![Perceptrons in 2D](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\Lecture 2 Learning to Answer Yes or No\2D Perceptrons.png)
+![Perceptrons in 2D](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\lecture2_learning_to_answer_yes_or_no\2d_perceptrons.png)
 
 
 
@@ -43,22 +43,22 @@ shall have large positive weights in a good perceptron for the task?
 PLA算法就是要在Perceptrons(Perceptron Hypothesis Set)找到合适的Perceptron，而Perceptron由$w$决定，即找到合适$w$，使样本完全分开。
 ### Cyclic PLA
 Cyclic PLA算法如下所示
-（1）初始化$w​$->$w_0​$
-（2）更新$w​$
+（1）初始化$w$->$w_0$
+（2）更新$w$
 &emsp;&emsp;For t = 0,1,...
-&emsp;&emsp;&emsp;&emsp;find a mistake of $w_t​$ called ($x_{n(t)}​$,$y_{n(t)}​$)
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$sign(w_t^Tx_{n(t)}) \ne y_{n(t)}​$
+&emsp;&emsp;&emsp;&emsp;find a mistake of $w_t$ called ($x_{n(t)}$,$y_{n(t)}$)
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$sign(w_t^Tx_{n(t)}) \ne y_{n(t)}$
 
 &emsp;&emsp;&emsp;&emsp;correct the mistake by
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$w_{(t+1)} ← w_t + y_{n(t)}x_{n(t)}​$
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$w_{(t+1)} ← w_t + y_{n(t)}x_{n(t)}$
 
 &emsp;&emsp;... until **no more mistakes**
-&emsp;&emsp;return **last w** (called $w_{PLA}​$ ) as g	
+&emsp;&emsp;return **last w** (called $w_{PLA}$ ) as g	
 
 PLA算法的精髓在于**找到与感知器分类不正确的点，然后通过不正确的点修正感知器，直到所有的样本点分类正确。**
-修正公式：$w_{(t+1)} ← w_t + y_{n(t)}x_{n(t)}​$
+修正公式：$w_{(t+1)} ← w_t + y_{n(t)}x_{n(t)}$
 修正图示：
-![PLA更新权值](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\Lecture 2 Learning to Answer Yes or No\PLA_update_w.png)
+![PLA更新权值](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\lecture2_learning_to_answer_yes_or_no\pla_update_w.png)
 <br/>
 
 ### Fun Time
@@ -71,7 +71,7 @@ $$
 1.&nbsp;$w_{t+1}^Tx_{n} =  y_{n}$
 2.&nbsp;$sign(w_{t+1}^Tx_{n}) = y_{n}$
 3.&nbsp;$y_{n}w_{t+1}^Tx_{n} \geq y_{n}w_{t}^Tx_{n}$ &nbsp;$\checkmark$
-4.&nbsp;$y_{n}w_{t+1}^Tx_{n} < y_{n}w_{t}^Tx_{n}​$
+4.&nbsp;$y_{n}w_{t+1}^Tx_{n} < y_{n}w_{t}^Tx_{n}$
 <br/>
 
 **Explanation**
@@ -95,7 +95,7 @@ if **PLA halts** (i.e. no more mistakes), (necessary condition) D allows **some 
 
 linear separable $D$ ⇔ exists **perfect** $\mathbf{w_f}$ such that $sign(w_f^Tx_{n}) = y_{n}$
 
-![线性可分性](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\Lecture 2 Learning to Answer Yes or No\linear_separability.png)
+![线性可分性](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\lecture2_learning_to_answer_yes_or_no\linear_separability.png)
 
 <br/>
 
@@ -104,7 +104,7 @@ linear separable $D$ ⇔ exists **perfect** $\mathbf{w_f}$ such that $sign(w_f^T
 ### 感知器的修正
 
 Fun Time中我们推导出感知器每次修正，$y_{n}w_{t+1}^Tx_{n} \ge y_{n}w_{t}^Tx_{n}$, $w_t$就会向$w_f$逼近。
-我们计算$\Delta w_f^Tw_{t+1}​$再次确认下
+我们计算$\Delta w_f^Tw_{t+1}$再次确认下
 $$
 \because w_f \ is \ perfect \ for \ x_n
 \\ \therefore y_{n(t)}w_t^Tx_{n(t)} \ge \mathop{min}\limits_n \, y_{n(t)}w_t^Tx_{n(t)} > 0
@@ -118,9 +118,9 @@ $$
 \end{aligned}
 $$
 
-感知器每次修正，$\mathbf{w}_{f}^{T} \mathbf{w}_{t+1} > \mathbf{w}_{f}^{T} \mathbf{w}_{t}​$，$w_t​$是在向$w_f​$逼近。
+感知器每次修正，$\mathbf{w}_{f}^{T} \mathbf{w}_{t+1} > \mathbf{w}_{f}^{T} \mathbf{w}_{t}$，$w_t$是在向$w_f$逼近。
 
-但是我们希望的逼近是夹角的逼近，而不是数值的增大。计算$\Delta||w_t||^2​$。
+但是我们希望的逼近是夹角的逼近，而不是数值的增大。计算$\Delta||w_t||^2$。
 
 $$
 \begin{aligned}
@@ -131,9 +131,9 @@ $$
 \\ & \leq\left\|\mathbf{w}_{t}\right\|^{2}+\max _{n}\left\| \mathbf{x}_{n}\right\|^{2}
 \end{aligned}
 $$
-最大增长不会超过$\mathop{max} \limits_{n}\left\|\mathbf{x}_{n}\right\|^{2}​$
+最大增长不会超过$\mathop{max} \limits_{n}\left\|\mathbf{x}_{n}\right\|^{2}$
 
-实际上$w_0=0$，在T次修正后$\cos\theta=\frac{\mathbf{w}_{f}^{T}}{\left\|\mathbf{w}_{f}\right\|} \frac{\mathbf{w}_{T}}{\left\|\mathbf{w}_{T}\right\|} \geq \sqrt{T} \cdot constant​$
+实际上$w_0=0$，在T次修正后$\cos\theta=\frac{\mathbf{w}_{f}^{T}}{\left\|\mathbf{w}_{f}\right\|} \frac{\mathbf{w}_{T}}{\left\|\mathbf{w}_{T}\right\|} \geq \sqrt{T} \cdot constant$
 **证明:**
 $$
 R^2 = \max _{n} \|\mathbf{x}_{n}\|^{2} \quad \rho = \frac{\min \limits _{n} y_{n} \mathbf{w}_{f}^{T} x_n}{\mathbf{\| w_f \|}}
@@ -186,7 +186,7 @@ $$
 **结果**
 最终会达到完全可分，不知道会更新多少次。
 
-![在真实数据中学习](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\Lecture 2 Learning to Answer Yes or No\learning_with_data.png)
+![在真实数据中学习](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\lecture2_learning_to_answer_yes_or_no\learning_with_data.png)
 
 <br/>
 
@@ -201,10 +201,10 @@ $$
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$sign(w_t^Tx_{n(t)}) \ne y_{n(t)}$
 
 &emsp;&emsp;&emsp;&emsp;correct the mistake by
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$w_{(t+1)} ← w_t + y_{n(t)}x_{n(t)}​$
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$w_{(t+1)} ← w_t + y_{n(t)}x_{n(t)}$
 
-&emsp;&emsp;&emsp;&emsp;if $w_ {t+1}​$ makes fewer mistakes than $\hat{\mathbf{w}}​$, replace $\hat{\mathbf{w}}​$ by $w_ {t+1}​$
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$w_{(t+1)} ← w_t + y_{n(t)}x_{n(t)}​$
+&emsp;&emsp;&emsp;&emsp;if $w_ {t+1}$ makes fewer mistakes than $\hat{\mathbf{w}}$, replace $\hat{\mathbf{w}}$ by $w_ {t+1}$
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$w_{(t+1)} ← w_t + y_{n(t)}x_{n(t)}$
 
 
 
@@ -212,8 +212,8 @@ $$
 &emsp;&emsp;return  $\hat{\mathbf{w}}$ (called $w_{Pocket}$ ) as g	
 
 Pocket PLA算法：
-&emsp;&emsp;按照PLA一样更新$w_{t}​$的值，但是用一个Pocket(​$\hat{\mathbf{w}}​$)存储当前犯错误最少的感知器。	
-&emsp;&emsp;当执行一定时间或者更新次数，返回当前​$\hat{\mathbf{w}}​$。 
+&emsp;&emsp;按照PLA一样更新$w_{t}$的值，但是用一个Pocket($\hat{\mathbf{w}}$)存储当前犯错误最少的感知器。	
+&emsp;&emsp;当执行一定时间或者更新次数，返回当前$\hat{\mathbf{w}}$。 
 
 <br/>
 
@@ -238,7 +238,7 @@ Pocket PLA算法：
 
 **Perceptron Learning Algorithm (PLA)**
 &emsp;&emsp;$sign(w_t^Tx_{n(t)}) \ne y_{n(t)}$，$w_{(t+1)} \leftarrow w_t + y_{n(t)}x_{n(t)}$ 
-&emsp;&emsp;$g \leftarrow w_T ​$
+&emsp;&emsp;$g \leftarrow w_T $
 <br/>
 
 **Guarantee of PLA**
