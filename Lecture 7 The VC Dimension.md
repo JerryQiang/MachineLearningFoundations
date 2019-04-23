@@ -17,7 +17,7 @@ VC Dimension is the maximum of non-break point.
 &emsp;&emsp; the most inputs $H$ that can shatter
 VC Dimension反映了假设集在数据集上的性质：数据集的最大分类情况。
 $d_{vc}$和minimum break point都是"一线曙光"的分界点。
- $ if \ N \geq 2, d_{\mathrm{vc}} \geq 2, m_{\mathcal{H}}(N) \leq N^{d_{\mathrm{vc}}}$
+$if \ N \geq 2, d_{\mathrm{vc}} \geq 2, m_{\mathcal{H}}(N) \leq N^{d_{\mathrm{vc}}}$
 
 ![The Four VC Dimensions](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\Lecture 7 The VC Dimension\four_vc_dimensions.png)
 
@@ -135,14 +135,88 @@ $$
 \\ probability ≥ 1 − \delta, \ \operatorname{GOOD} : | E_{in}(g)-E_{out}(g) | \leq \epsilon
 \\ \delta=4(2 N)^{d_{\mathrm{vc}}} \exp \left(-\frac{1}{8} \epsilon^{2} N\right)
 \\ \epsilon = \sqrt{\frac{8}{N} \ln \left(\frac{4(2 N)^{d_{\mathrm{vc}}}}{\delta}\right)}
-\\ E_{out}(g) \leq E_{in}(g)+\sqrt{\frac{8}{N} \ln \left(\frac{4(2 N)^{d} v_{c}}{\delta}\right)}
+\\  E_{in}(g) - \sqrt{\frac{8}{N} \ln \left(\frac{4(2 N)^{d_{\mathrm{vc}}}}{\delta}\right)} \leq E_{out}(g) \leq E_{in}(g) + \sqrt{\frac{8}{N} \ln \left(\frac{4(2 N)^{d_{\mathrm{vc}}}}{\delta}\right)}
+\\ \underbrace{\sqrt{\frac{8}{N} \ln \left(\frac{4(2 N)^{d_{\mathrm{vc}}}}{\delta}\right)}}_{\Omega(N, \mathcal{H}, \delta)} \quad  \text{ penalty for model complexity}
 $$
 
+![THE VC Message](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\Lecture 7 The VC Dimension\vc_message.png)
+<br/>
 
-loosely: model complexity & sample complexity
+
+### Sample Complexity
+$$
+\mathbb{P}_{\mathcal{D}}\left[\underbrace{ | E_{\text { in }}(g)-E_{\text { out }}(g) |>\epsilon}_{\text { BAD }}\right] \leq \underbrace{4(2 N)^{d_{0}} \exp \left(-\frac{1}{8} \epsilon^{2} N\right)}_{\delta}
+~\\
+~\\
+~\\
+\\  \text{given} \ \epsilon=0.1, \delta=0.1, d_{\mathrm{vc}}=3
+~\\
+~\\
+\begin{array}{cc}{N} & {\text { bound }} \\ {100} & {2.82 \times 10^{7}} \\ {1,000} & {9.17 \times 10^{9}} \\ {10,000} & {1.19 \times 10^{8}} \\ {100,000} & {1.65 \times 10^{-38}} \\ {29,300} & {9.99 \times 10^{-2}}\end{array}
+\\ \text{sample complexity:} \ N \approx 10,000 d_{\mathrm{vc}} \text{in theory}
+$$
+
+```python
+import math
+
+
+# 计算VC Bound
+def count_vc_bound(N, epsilon=0.1, delta=0.1, d_vc=3):
+    vc_bound = 4*(2*N)**d_vc*math.exp(-0.125*epsilon**2*N)
+    return vc_bound
+
+
+if __name__ == '__main__':
+    print('%e' % count_vc_bound(100))
+    print('%e' % count_vc_bound(1000))
+    print('%e' % count_vc_bound(10000))
+    print('%e' % count_vc_bound(100000))
+    print('%e' % count_vc_bound(29300))
+    print(count_vc_bound(0))
+    print(count_vc_bound(1))
+    delta = 0.1
+    n = 1
+    while count_vc_bound(n) > delta:
+        n = n + 1
+    print(n)
+    print('%e' % count_vc_bound(29299))
+    print('%e' % count_vc_bound(29300))
+    print('%e' % count_vc_bound(29301))
+```
+
+<br/>
+
+### Looseness of VC Bound
+<br/>
+
+$$
+N \approx 10,000 d_{\mathrm{vc}} \ \text{in theory},N \approx 10 d_{\mathrm{vc}} \ \text{in practice}
+$$
+
+![similarly loose for all models](E:\学习笔记\mkdocs\MachineLearning\docs\Foundations\resources\imgs\Lecture 7 The VC Dimension\loose_vc_bound.png)
+<br/>
+
+我们能基于VC Bound原理**提升**整个机器学习流程。
+<br/>
+
+### Fun Time
+Consider the VC Bound below. How can we decrease the probability of getting BAD data?
+1 decrease model complexity $d_{\mathrm{vc}}$
+2 increase data size $N$ a lot 
+3 increase generalization error tolerance $\epsilon$
+4 **all of the above** &nbsp;$\checkmark$
+<br/>
+**Explanation**
+降低模型复杂度：减少假设集选择
+增大数据量：使训练数据更接近真实数据分布
+增大容忍程度：扩大好数据范围
+<br/>
+
 
 ## Summary
-本篇讲义主要讲了loosely: model complexity & sample complexity。
+本篇讲义主要讲了模型复杂度，数据数量级以及VC Bound的宽松程度。
+
+在有限的$d_{\mathrm{vc}}$，足够大的$N$，足够小的$E_{in}$，我们真正能学到模型。
 
 <br/>
 
@@ -153,14 +227,15 @@ loosely: model complexity & sample complexity
 <br/>
 
 **VC Dimension of Perceptrons**
-$d_{VC} (H)= d + 1$ 
+&emsp;&emsp; $d_{VC} (H)= d + 1$ 
 <br/>
 
 **Physical Intuition of VC Dimension**
-$d_{VC}$ ≈ #free parameters
+&emsp;&emsp; $d_{VC}$ ≈ #free parameters
 <br/>
 
 **Interpreting VC Dimension**
+&emsp;&emsp;loosely: model complexity & sample complexity
 <br/>
 
 ### 参考文献
