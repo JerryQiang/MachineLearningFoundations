@@ -134,7 +134,7 @@ skill means **improving some performance measure**
 
 **Machine Learning**: use data to compute hypothesis g that approximates target f.
 
-![Practical Definition of Machine Learning](resources\imgs\lecture1_the_learning_problem\practical_definition_of_machine_learning.png)
+![Practical Definition of Machine Learning](resources/imgs/lecture1_the_learning_problem/practical_definition_of_machine_learning.png)
 $$
 f:X_D{\longrightarrow}Y_D
 \\ g:X{\longrightarrow}Y
@@ -214,9 +214,9 @@ $$
 ### 机器学习基石课程总结
 **学完这门课，大家最终会掌握机器学习的完整概念和流程。**
 
-![机器学习基石图标](resources\imgs\lecture1_the_learning_problem\foundation_logo.png)
+![机器学习基石图标](resources/imgs/lecture1_the_learning_problem/foundation_logo.png)
 
-![Learning Flow](resources\imgs\lecture1_the_learning_problem\learning_flow.png)
+![Learning Flow](resources/imgs/lecture1_the_learning_problem/learning_flow.png)
 <br/>
 
 
@@ -224,9 +224,9 @@ $$
 
 **学完这门课，可以继续学进阶课程——《Machine Learning Techniques》(机器学习技法)，大家最终会学习和掌握各种不同的机器学习算法。**
 
-![机器学习技法图标](resources\imgs\lecture1_the_learning_problem\technique_logo.png)
+![机器学习技法图标](resources/imgs/lecture1_the_learning_problem/technique_logo.png)
 
-![机器学习算法簇](resources\imgs\lecture1_the_learning_problem\jungle.png)
+![机器学习算法簇](resources/imgs/lecture1_the_learning_problem/jungle.png)
 <br/>
 
 ### 参考文献
