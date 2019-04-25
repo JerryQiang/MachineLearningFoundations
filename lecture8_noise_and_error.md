@@ -51,8 +51,7 @@ Let’s revisit PLA/pocket. Which of the following claim is true?
 **Explanation**
 1 如果我们可以计算$D$是否线性可分，那么就能直接获取$W^*$，就无需使用PLA算法。
 2 数据集线性不可分，可能存在***噪音**，真实数据集线性可分
-3 数据集线性可分，可能收集的**数据少**，存在**巧合**，并不一定说明目标函数一定是线性函数。
-:-)
+3 数据集线性可分，可能收集的**数据少**，存在**巧合**，并不一定说明目标函数一定是线性函数。:-)
 
 <br/>
 
@@ -64,8 +63,8 @@ E_{\mathrm{in}}(g)=\frac{1}{N} \sum_{n=1}^{N} \operatorname{err}\left(g\left(\ma
 \\
 E_{\text {out}}(g)=\underset{\mathbf{x} \sim P}{\mathcal{E}} \operatorname{err}(g(\mathbf{x}), f(\mathbf{x}))
 $$
-**训练数据**是有限的，使用离散分布列计算平均错误。
-**预测数据**是无限的，使用概率分布计算平均错误。
+**训练数据**是有限的，使用离散分布列计算平均损失。
+**预测数据**是无限的，使用概率分布计算平均损失。
 以后会学到**测试数据**，我们使用测试数据代替预测数据，来判断学习模型的好坏。
 
 
@@ -94,8 +93,8 @@ $P(y | \mathbf{x})$ and **err measure** define **ideal mini-target** $f(\mathbf{
 
 <br/>
 
-![Learning Flow with Error Measure](resources/imgs/lecture8_noise_and_error/error_measure_learning_flow.png)
-$A$根据错误衡量方法，选择假设$g$.
+![Learning Flow with Error Measure](https://raw.githubusercontent.com/JerryQiang/MachineLearningFoundations/master/resources/imgs/lecture8_noise_and_error/error_measure_learning_flow.png)
+$A$根据损失衡量方法，选择假设$g$.
 
 <br/>
 
@@ -112,11 +111,10 @@ $$
 4 4 =  $\underset{y \in \mathcal{Y}}{\operatorname{argmax}} P(y | \mathbf{x})$
 <br/>
 **Explanation**
-2.5, 2.85, 3, 4的错误目标值分别为1.0, 0.965, 0.95, 1.15.
-其实对于绝对值错误衡量方法，最小目标值为**中位数**计算所得。
+2.5, 2.85, 3, 4的损失目标值分别为1.0, 0.965, 0.95, 1.15.
+其实对于绝对值损失衡量方法，最小目标值为**中位数**计算所得。
 至于原因，大家进行一下**思维实验**。
-&emsp;&emsp;现在以中位数计算得到目标值，由于中位数本身占了一定比例，左边+中位数>右边，若往左移，目标值会增大；同理往右移亦然。
-:-)
+&emsp;&emsp;现在以中位数计算得到目标值，由于中位数本身占了一定比例，左边+中位数>右边，若往左移，目标值会增大；同理往右移亦然。:-)
 
 
 ```python
@@ -173,7 +171,7 @@ NT：g = -1，f = +1, 错误的拒绝；
 <br/>
 
 ![Learning Flow with Algorithmic Error Measure](https://raw.githubusercontent.com/JerryQiang/MachineLearningFoundations/master/resources/imgs/lecture8_noise_and_error/error_measure_choice_learning_flow.png)
-$A$从众多错误衡量方法挑选一个错误衡量方法，并**确定错误衡量的权重**$\widehat{\mathrm{err}}$，选择假设$g$.
+$A$从众多损失衡量方法挑选一个损失衡量方法，并**确定损失衡量的权重**$\widehat{\mathrm{err}}$，选择假设$g$.
 <br/>
 
 ### Fun Time
@@ -186,8 +184,7 @@ Consider err below for CIA. What is E in (g) when using this err?
 <br/>
 **Explanation**
 $g$是预测值，$f$是真实值$y_n$。
-注意下权值。
-:-)
+注意下权值。:-)
 <br/>
 
 
